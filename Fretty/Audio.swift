@@ -50,7 +50,11 @@ final class GuitarSynth {
         if started && engine.isRunning { return true }
         do {
             let session = AVAudioSession.sharedInstance()
-            try session.setCategory(.playback, options: [.mixWithOthers])
+            if recording {
+                try session.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker, .mixWithOthers, .allowBluetoothA2DP])
+            } else {
+                try session.setCategory(.playback, options: [.mixWithOthers])
+            }
             try session.setActive(true)
             buildGraph()
             if !engine.isRunning { try engine.start() }
@@ -61,6 +65,21 @@ final class GuitarSynth {
             started = false
         }
         return started
+    }
+
+    private var recording = false
+
+    /// Switches the shared audio session so the microphone and the synth can run together.
+    func setRecording(_ on: Bool) {
+        guard on != recording else { return }
+        recording = on
+        started = false
+        if on {
+            let session = AVAudioSession.sharedInstance()
+            try? session.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker, .mixWithOthers, .allowBluetoothA2DP])
+            try? session.setActive(true)
+        }
+        _ = ensureStarted()
     }
 
     /// Call early so the first pluck has no start-up lag.

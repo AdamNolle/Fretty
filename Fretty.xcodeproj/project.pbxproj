@@ -14,6 +14,7 @@
 		3D4103B861E96632C59DE3AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED80EA873BF3C1F07931B21 /* Assets.xcassets */; };
 		58E54E2559A43C5185462F45 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DD7051E00BDB7F9D9E391 /* Theme.swift */; };
 		66727FABFF2117600210D212 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60328EF82FDD01C99899E6 /* LearnView.swift */; };
+		690FD846390605ACB5CDA053 /* VoiceAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1F71211FF74AC87960B0A1 /* VoiceAnswer.swift */; };
 		79E1CB6D88383F2BDE2067EE /* DMMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EBC2B76C9D53F3CB7B7B0F8 /* DMMono-Regular.ttf */; };
 		7FC4FB523BEF8050CF4D1D0C /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE404345CC0717966E3F29C /* Store.swift */; };
 		9CD204A4C115248D4E7F6281 /* BoardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0E70BD7399364CE1D88BD8 /* BoardViews.swift */; };
@@ -22,6 +23,7 @@
 		A9523D4687184D071CEA2048 /* ProgressScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F74A357B7B868DF8B7807 /* ProgressScreen.swift */; };
 		B2ED78DCDD6C2B147A0F9CC0 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BD47A7CD03F5B3CA9ACDDF /* Music.swift */; };
 		B4768A115472E509DB0468DF /* DMMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DA1BB44F7852FECE7053BE2 /* DMMono-Medium.ttf */; };
+		B68686F3C39522C1DDE6FB9B /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 5E35FDB31749AAD770822E18 /* AppIcon.icon */; };
 		C04703945A83588409640151 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B455AC8EBA79F7F3A87D8 /* AppModel.swift */; };
 		C53772C78F49447C69E51B37 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B6A8D46D99E1D79C37C39 /* Components.swift */; };
 		CC812A4DD49764D3CBF45CC0 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEB5A361A1207A25C763F84 /* Audio.swift */; };
@@ -39,6 +41,7 @@
 		46A70DD7F1E1FA4CDB262512 /* DebugSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSeed.swift; sourceTree = "<group>"; };
 		4ACD5C45DBB12E2FC3DE98D3 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		4FE404345CC0717966E3F29C /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		5E35FDB31749AAD770822E18 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		5EBC2B76C9D53F3CB7B7B0F8 /* DMMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMMono-Regular.ttf"; sourceTree = "<group>"; };
 		6DA1BB44F7852FECE7053BE2 /* DMMono-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMMono-Medium.ttf"; sourceTree = "<group>"; };
 		6E0E70BD7399364CE1D88BD8 /* BoardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViews.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		E587A6F9503DC60E6C35FE45 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F3738A89F15677AAB7E25569 /* NotoMusic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoMusic-Regular.ttf"; sourceTree = "<group>"; };
 		F3BD47A7CD03F5B3CA9ACDDF /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		FC1F71211FF74AC87960B0A1 /* VoiceAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAnswer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -92,6 +96,7 @@
 		79A78E2535710914E785BB71 /* Fretty */ = {
 			isa = PBXGroup;
 			children = (
+				5E35FDB31749AAD770822E18 /* AppIcon.icon */,
 				9C3B455AC8EBA79F7F3A87D8 /* AppModel.swift */,
 				0EEB5A361A1207A25C763F84 /* Audio.swift */,
 				6E0E70BD7399364CE1D88BD8 /* BoardViews.swift */,
@@ -107,6 +112,7 @@
 				4FE404345CC0717966E3F29C /* Store.swift */,
 				3CF63D57DBB52E49581DE79A /* SummaryView.swift */,
 				845DD7051E00BDB7F9D9E391 /* Theme.swift */,
+				FC1F71211FF74AC87960B0A1 /* VoiceAnswer.swift */,
 				5EE3A8C2F87AA1789F8C8651 /* Resources */,
 			);
 			path = Fretty;
@@ -172,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68686F3C39522C1DDE6FB9B /* AppIcon.icon in Resources */,
 				3D4103B861E96632C59DE3AB /* Assets.xcassets in Resources */,
 				B4768A115472E509DB0468DF /* DMMono-Medium.ttf in Resources */,
 				79E1CB6D88383F2BDE2067EE /* DMMono-Regular.ttf in Resources */,
@@ -201,6 +208,7 @@
 				7FC4FB523BEF8050CF4D1D0C /* Store.swift in Sources */,
 				F771624E51881EAE12E7C1F1 /* SummaryView.swift in Sources */,
 				58E54E2559A43C5185462F45 /* Theme.swift in Sources */,
+				690FD846390605ACB5CDA053 /* VoiceAnswer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +286,8 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Fretty;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Fretty listens for the note names you say when you answer a quiz by voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Fretty turns the note names you say into quiz answers. Recognition runs on your iPhone when supported.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -370,6 +380,8 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Fretty;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Fretty listens for the note names you say when you answer a quiz by voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Fretty turns the note names you say into quiz answers. Recognition runs on your iPhone when supported.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

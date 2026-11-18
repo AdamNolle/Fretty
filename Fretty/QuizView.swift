@@ -8,16 +8,28 @@ struct QuizView: View {
             VStack(spacing: 0) {
                 header(S)
                 question(S)
-                if let st = board.staff {
-                    StaffView(info: st)
-                        .padding(.horizontal, 20)
-                        .padding(.top, 2)
+                if S.q.type == .sname, let st = board.staff {
+                    // Sight-reading: a big staff, no fretboard. Answer with the buttons or by voice.
+                    VStack(spacing: 14) {
+                        Spacer(minLength: 0)
+                        StaffView(info: st, scale: 1.45)
+                        VoiceBar(voice: m.voice)
+                        Spacer(minLength: 0)
+                    }
+                    .padding(.horizontal, 20)
+                    .frame(maxHeight: .infinity)
+                } else {
+                    if let st = board.staff {
+                        StaffView(info: st)
+                            .padding(.horizontal, 20)
+                            .padding(.top, 2)
+                            .padding(.bottom, 8)
+                    }
+                    FretboardView(board: board) { s, f in m.tapCell(s, f) }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .padding(.top, 4)
                         .padding(.bottom, 8)
                 }
-                FretboardView(board: board) { s, f in m.tapCell(s, f) }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .padding(.top, 4)
-                    .padding(.bottom, 8)
                 footer(S)
                     .frame(height: 136)
                     .padding(.horizontal, 16)
@@ -71,6 +83,10 @@ struct QuizView: View {
                 .font(.fig(14, .semibold))
                 .contentTransition(.numericText())
                 .animation(.easeOut, value: S.answered)
+            }
+
+            if S.q.type == .name {
+                MicButton(voice: m.voice)
             }
 
             if S.combo >= 3 {
@@ -300,6 +316,72 @@ struct QuizView: View {
             .background(FW.badSoftBg, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 22, style: .continuous).strokeBorder(FW.bad, lineWidth: 1.5))
             .riseIn()
+        }
+    }
+}
+
+// MARK: - Voice controls
+
+struct MicButton: View {
+    let voice: VoiceListener
+    var body: some View {
+        Button { voice.toggle() } label: {
+            Image(systemName: voice.isOn ? "mic.fill" : "mic")
+                .font(.system(size: 15, weight: .bold))
+                .foregroundStyle(voice.isOn ? .white : FW.ink)
+                .frame(width: 40, height: 40)
+                .background(voice.isOn ? FW.accent : FW.card, in: Circle())
+                .shadow(color: FW.shadow.opacity(0.1), radius: 1, y: 1)
+                .symbolEffect(.pulse, isActive: voice.state == .listening)
+        }
+        .buttonStyle(PressScale(scale: 0.92))
+        .accessibilityLabel(voice.isOn ? "Stop answering by voice" : "Answer by voice")
+    }
+}
+
+/// Pill under the staff: toggles listening and shows what was heard.
+struct VoiceBar: View {
+    let voice: VoiceListener
+    var body: some View {
+        VStack(spacing: 6) {
+            Button { voice.toggle() } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: voice.isOn ? "mic.fill" : "mic")
+                        .font(.system(size: 15, weight: .bold))
+                        .symbolEffect(.pulse, isActive: voice.state == .listening)
+                    Text(label).font(.fig(15, .bold))
+                }
+                .foregroundStyle(voice.isOn ? .white : FW.ink)
+                .padding(.horizontal, 18)
+                .frame(height: 44)
+                .background(voice.isOn ? FW.accent : FW.card, in: Capsule())
+                .overlay(Capsule().strokeBorder(voice.isOn ? .clear : FW.border, lineWidth: 1.5))
+            }
+            .buttonStyle(PressScale(scale: 0.96))
+
+            Group {
+                if case .denied(let why) = voice.state {
+                    Text(why)
+                } else if voice.isOn {
+                    Text(voice.heard.isEmpty ? "Say the note, like “F sharp” or “B flat”." : "Heard “\(voice.heard)”")
+                } else {
+                    Text("Or tap the note below.")
+                }
+            }
+            .font(.fig(13))
+            .foregroundStyle(FW.muted)
+            .multilineTextAlignment(.center)
+            .lineLimit(2)
+            .frame(height: 34, alignment: .top)
+            .animation(.easeOut(duration: 0.15), value: voice.heard)
+        }
+    }
+
+    private var label: String {
+        switch voice.state {
+        case .starting: return "Starting…"
+        case .listening: return "Listening"
+        default: return "Answer by voice"
         }
     }
 }

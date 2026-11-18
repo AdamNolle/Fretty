@@ -190,7 +190,7 @@ struct MarkerView: View {
         case .target:
             ZStack {
                 PulseRing()
-                dot(34, FW.accent, size: 16).popIn()
+                dot(34, FW.ink, size: 16).popIn()
             }
             .frame(width: 34, height: 34)
         case .good:
@@ -204,8 +204,9 @@ struct MarkerView: View {
                 .shadow(color: Color(oklch: 0.3, 0.02, 60, opacity: 0.3), radius: 3, y: 2)
                 .popIn()
         case .root:
-            dot(32, FW.accent, size: 12)
-                .background(Circle().fill(.white).padding(-2))
+            dot(32, FW.ink, size: 12)
+                .background(Circle().fill(.white).padding(-2.5))
+                .background(Circle().fill(FW.ink.opacity(0.35)).padding(-4))
                 .shadow(color: Color(oklch: 0.3, 0.02, 60, opacity: 0.3), radius: 3, y: 2)
                 .popIn()
         case .openStr:
@@ -232,7 +233,7 @@ private struct PulseRing: View {
     @State private var go = false
     var body: some View {
         Circle()
-            .fill(FW.accent)
+            .fill(FW.ink)
             .scaleEffect(go ? 1.9 : 1)
             .opacity(go ? 0 : 0.5)
             .onAppear {
@@ -245,69 +246,75 @@ private struct PulseRing: View {
 
 struct StaffView: View {
     let info: StaffInfo
+    /// Uniform scale; geometry is redrawn at this size (not bitmap-scaled) so lines and glyphs stay crisp.
+    var scale: CGFloat = 1
 
     var body: some View {
+        let k = scale
+        let H = 176 * k
         GeometryReader { geo in
             let w = geo.size.width
             let pos = Music.staffPos(info.midi, flat: info.flat)
-            let y = Music.SBASE - Double(pos) * Music.SSTEP
+            let y = (Music.SBASE - Double(pos) * Music.SSTEP) * k
             let x = w * 0.56
+            let top = 55.25 * k, gap = 14 * k, line = max(1.5, 1.5 * k)
             ZStack(alignment: .topLeading) {
                 // Staff lines
                 ForEach(0..<5, id: \.self) { i in
-                    FW.ink.frame(width: w - 28, height: 1.5).offset(x: 14, y: 55.25 + CGFloat(i) * 14)
+                    FW.ink.frame(width: w - 28 * k, height: line).offset(x: 14 * k, y: top + CGFloat(i) * gap)
                 }
-                FW.ink.frame(width: 1.5, height: 57.5).offset(x: 14, y: 55.25)
-                FW.ink.frame(width: 1.5, height: 57.5).offset(x: w - 15.5, y: 55.25)
+                FW.ink.frame(width: line, height: gap * 4 + line).offset(x: 14 * k, y: top)
+                FW.ink.frame(width: line, height: gap * 4 + line).offset(x: w - 14 * k - line, y: top)
 
                 // Treble clef, baseline at y = 98
                 Text("𝄞")
-                    .font(.music(56))
+                    .font(.music(56 * k))
                     .foregroundStyle(FW.ink)
                     .fixedSize()
-                    .alignmentGuide(.top) { d in d[.firstTextBaseline] - 98 }
-                    .alignmentGuide(.leading) { _ in -22 }
+                    .alignmentGuide(.top) { d in d[.firstTextBaseline] - 98 * k }
+                    .alignmentGuide(.leading) { _ in -22 * k }
 
                 // Ledger lines
                 ForEach(ledgers(pos), id: \.self) { p in
-                    FW.ink.frame(width: 34, height: 1.5).offset(x: x - 17, y: Music.SBASE - Double(p) * Music.SSTEP - 0.75)
+                    FW.ink.frame(width: 34 * k, height: line)
+                        .offset(x: x - 17 * k, y: (Music.SBASE - Double(p) * Music.SSTEP) * k - line / 2)
                 }
 
                 Group {
                     if Music.isAcc(info.midi % 12) {
                         Text(info.flat ? "♭" : "♯")
-                            .font(.system(size: 22, weight: .bold))
+                            .font(.system(size: 24 * k, weight: .semibold))
                             .foregroundStyle(FW.ink)
-                            .position(x: x - 24, y: y)
+                            .position(x: x - 25 * k, y: y - (info.flat ? 4 * k : 0))
                     }
                     // Stem
-                    FW.accent
-                        .frame(width: 1.6, height: 46)
-                        .offset(x: pos < 4 ? x + 6.8 : x - 8.4, y: pos < 4 ? y - 45 : y - 1)
+                    FW.ink
+                        .frame(width: 1.7 * k, height: 46 * k)
+                        .offset(x: pos < 4 ? x + 7.4 * k : x - 9 * k, y: pos < 4 ? y - 45 * k : y + 1 * k)
                     // Note head
                     Ellipse()
-                        .fill(FW.accent)
-                        .frame(width: 18, height: 13)
+                        .fill(FW.ink)
+                        .frame(width: 18.5 * k, height: 13 * k)
                         .rotationEffect(.degrees(-20))
                         .position(x: x, y: y)
                 }
                 .animation(.easeOut(duration: 0.2), value: info.midi)
 
                 if let name = info.name {
-                    noteText(name, 20, .heavy)
+                    noteText(name, 20 * min(k, 1.2), .heavy)
                         .foregroundStyle(.white)
                         .padding(.horizontal, 12)
                         .padding(.vertical, 6)
-                        .background(FW.accent, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                        .background(FW.ink, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                         .popIn()
                         .id(name)
                         .frame(width: w - 16, alignment: .trailing)
                         .offset(y: 14)
                 }
             }
-            .frame(width: w, height: 176, alignment: .topLeading)
+            .frame(width: w, height: H, alignment: .topLeading)
         }
-        .frame(height: 176)
+        .frame(height: H)
         .background(FW.card, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
         .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
         .cardShadow(strong: true)

@@ -31,6 +31,8 @@ targets:
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
         INFOPLIST_KEY_UIStatusBarStyle: UIStatusBarStyleDarkContent
         INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: Fretty listens for the note names you say when you answer a quiz by voice.
+        INFOPLIST_KEY_NSSpeechRecognitionUsageDescription: Fretty turns the note names you say into quiz answers. Recognition runs on your iPhone when supported.
     info:
       path: Fretty/Info.plist
       properties:

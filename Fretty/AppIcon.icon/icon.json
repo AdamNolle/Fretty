@@ -1,0 +1,59 @@
+{
+  "fill-specializations" : [
+    {
+      "value" : {
+        "linear-gradient" : [
+          "display-p3:0.99000,0.96000,0.90000,1.00000",
+          "display-p3:0.93000,0.87000,0.77000,1.00000"
+        ],
+        "orientation" : { "start" : { "x" : 0.5, "y" : 0.0 }, "stop" : { "x" : 0.5, "y" : 1.0 } }
+      }
+    },
+    {
+      "appearance" : "dark",
+      "value" : {
+        "linear-gradient" : [
+          "display-p3:0.20000,0.15000,0.11000,1.00000",
+          "display-p3:0.09000,0.07000,0.05000,1.00000"
+        ],
+        "orientation" : { "start" : { "x" : 0.5, "y" : 0.0 }, "stop" : { "x" : 0.5, "y" : 1.0 } }
+      }
+    }
+  ],
+  "groups" : [
+    {
+      "name" : "Notes",
+      "layers" : [
+        { "name" : "root", "image-name" : "root.svg", "glass" : true },
+        { "name" : "dots", "image-name" : "dots.svg", "glass" : true }
+      ],
+      "shadow" : { "kind" : "layer-color", "opacity" : 0.55 },
+      "translucency" : { "enabled" : true, "value" : 0.15 },
+      "specular" : true,
+      "lighting" : "individual"
+    },
+    {
+      "name" : "Strings",
+      "layers" : [
+        { "name" : "strings", "image-name" : "strings.svg", "glass" : false }
+      ],
+      "shadow" : { "kind" : "neutral", "opacity" : 0.35 },
+      "translucency" : { "enabled" : false, "value" : 0 },
+      "specular" : false
+    },
+    {
+      "name" : "Fretboard",
+      "layers" : [
+        { "name" : "frets", "image-name" : "frets.svg", "glass" : false },
+        { "name" : "board", "image-name" : "board.svg", "glass" : false }
+      ],
+      "shadow" : { "kind" : "neutral", "opacity" : 0.5 },
+      "translucency" : { "enabled" : false, "value" : 0 },
+      "specular" : true
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [ "watchOS" ],
+    "squares" : "shared"
+  }
+}

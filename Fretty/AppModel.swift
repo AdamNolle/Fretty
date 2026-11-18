@@ -135,11 +135,19 @@ final class AppModel {
     var learnTap: Cell? = nil
     var toast: Toast? = nil
 
+    /// Spoken answers for "name the note" questions.
+    let voice = VoiceListener()
+
     // Preferences (the design exposes these as tweakable props with these defaults).
     var spelling = "Mixed"      // Mixed | Sharps | Flats
     var retryMissed = true
 
     init() {
+        voice.onNote = { [weak self] p in self?.answerByVoice(p) }
+        voice.onNext = { [weak self] in
+            guard let self, self.sess?.ans != nil else { return }
+            self.next()
+        }
         #if DEBUG
         // Screenshot hooks, e.g. `-uiSeed 1 -uiTab learn -uiLearn chords -uiStart staff -uiAnswer 1`
         let ud = UserDefaults.standard
@@ -423,6 +431,12 @@ final class AppModel {
         }
     }
 
+    /// Voice answers only apply to questions that ask for a note name.
+    func answerByVoice(_ p: Int) {
+        guard screen == .quiz, let S = sess, S.ans == nil, S.q.type == .name || S.q.type == .sname else { return }
+        answer(p == S.q.p, Answer(correct: false, choice: p))
+    }
+
     private static let goodWords = ["Nailed it", "Clean", "Locked in", "Sharp", "Yes", "Spot on"]
 
     func answer(_ correct: Bool, _ extra: Answer) {
@@ -512,6 +526,7 @@ final class AppModel {
     }
 
     func finish() {
+        voice.stop()
         advTask?.cancel()
         clockTask?.cancel()
         guard let S = sess else { return }
