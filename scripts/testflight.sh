@@ -2,6 +2,8 @@
 # Archive Fretty and upload it to App Store Connect / TestFlight.
 # Requires an Apple ID for team RSDJXF7DXN signed in under Xcode ▸ Settings ▸ Accounts.
 set -euo pipefail
+# Homebrew rsync breaks Xcode's export packaging ("Copy failed"); use the system tools.
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 cd "$(dirname "$0")/.."
 xcodegen generate -q
 rm -rf build/Fretty.xcarchive
