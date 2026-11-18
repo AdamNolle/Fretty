@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02D69DC8931955958DA76C12 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E587A6F9503DC60E6C35FE45 /* HomeView.swift */; };
+		12E3C35F3A3BA8DF7F104188 /* FrettyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32294402DEA397C5DD83FC4B /* FrettyApp.swift */; };
+		2E0D8EB9A2A12B19A6CECAEC /* Figtree.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73986D1F3E4FEE359BBC407E /* Figtree.ttf */; };
+		3D4103B861E96632C59DE3AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED80EA873BF3C1F07931B21 /* Assets.xcassets */; };
+		58E54E2559A43C5185462F45 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DD7051E00BDB7F9D9E391 /* Theme.swift */; };
+		66727FABFF2117600210D212 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60328EF82FDD01C99899E6 /* LearnView.swift */; };
+		79E1CB6D88383F2BDE2067EE /* DMMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EBC2B76C9D53F3CB7B7B0F8 /* DMMono-Regular.ttf */; };
+		7FC4FB523BEF8050CF4D1D0C /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE404345CC0717966E3F29C /* Store.swift */; };
+		9CD204A4C115248D4E7F6281 /* BoardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0E70BD7399364CE1D88BD8 /* BoardViews.swift */; };
+		A13F1E6AA50AA91A01833C57 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACD5C45DBB12E2FC3DE98D3 /* QuizView.swift */; };
+		A8123AC6AA23CD715CCAE675 /* NotoMusic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3738A89F15677AAB7E25569 /* NotoMusic-Regular.ttf */; };
+		A9523D4687184D071CEA2048 /* ProgressScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F74A357B7B868DF8B7807 /* ProgressScreen.swift */; };
+		B2ED78DCDD6C2B147A0F9CC0 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BD47A7CD03F5B3CA9ACDDF /* Music.swift */; };
+		B4768A115472E509DB0468DF /* DMMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DA1BB44F7852FECE7053BE2 /* DMMono-Medium.ttf */; };
+		C04703945A83588409640151 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B455AC8EBA79F7F3A87D8 /* AppModel.swift */; };
+		C53772C78F49447C69E51B37 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B6A8D46D99E1D79C37C39 /* Components.swift */; };
+		CC812A4DD49764D3CBF45CC0 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEB5A361A1207A25C763F84 /* Audio.swift */; };
+		F771624E51881EAE12E7C1F1 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF63D57DBB52E49581DE79A /* SummaryView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0EEB5A361A1207A25C763F84 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		137B6A8D46D99E1D79C37C39 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		228991997C85D5B7D9D43BAE /* Fretty.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Fretty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		258082BFEFDF7BC750174B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2D60328EF82FDD01C99899E6 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
+		32294402DEA397C5DD83FC4B /* FrettyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrettyApp.swift; sourceTree = "<group>"; };
+		3CF63D57DBB52E49581DE79A /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		4ACD5C45DBB12E2FC3DE98D3 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		4FE404345CC0717966E3F29C /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		5EBC2B76C9D53F3CB7B7B0F8 /* DMMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMMono-Regular.ttf"; sourceTree = "<group>"; };
+		6DA1BB44F7852FECE7053BE2 /* DMMono-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMMono-Medium.ttf"; sourceTree = "<group>"; };
+		6E0E70BD7399364CE1D88BD8 /* BoardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViews.swift; sourceTree = "<group>"; };
+		73986D1F3E4FEE359BBC407E /* Figtree.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Figtree.ttf; sourceTree = "<group>"; };
+		845DD7051E00BDB7F9D9E391 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		9C3B455AC8EBA79F7F3A87D8 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		BED80EA873BF3C1F07931B21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D69F74A357B7B868DF8B7807 /* ProgressScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressScreen.swift; sourceTree = "<group>"; };
+		E587A6F9503DC60E6C35FE45 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F3738A89F15677AAB7E25569 /* NotoMusic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoMusic-Regular.ttf"; sourceTree = "<group>"; };
+		F3BD47A7CD03F5B3CA9ACDDF /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		228C6B74847EB60980BF1C07 = {
+			isa = PBXGroup;
+			children = (
+				79A78E2535710914E785BB71 /* Fretty */,
+				42020A8D3E26BAE982A4B6C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42020A8D3E26BAE982A4B6C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				228991997C85D5B7D9D43BAE /* Fretty.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EE3A8C2F87AA1789F8C8651 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BED80EA873BF3C1F07931B21 /* Assets.xcassets */,
+				6A195D3F98EC75F7253B395C /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6A195D3F98EC75F7253B395C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6DA1BB44F7852FECE7053BE2 /* DMMono-Medium.ttf */,
+				5EBC2B76C9D53F3CB7B7B0F8 /* DMMono-Regular.ttf */,
+				73986D1F3E4FEE359BBC407E /* Figtree.ttf */,
+				F3738A89F15677AAB7E25569 /* NotoMusic-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		79A78E2535710914E785BB71 /* Fretty */ = {
+			isa = PBXGroup;
+			children = (
+				9C3B455AC8EBA79F7F3A87D8 /* AppModel.swift */,
+				0EEB5A361A1207A25C763F84 /* Audio.swift */,
+				6E0E70BD7399364CE1D88BD8 /* BoardViews.swift */,
+				137B6A8D46D99E1D79C37C39 /* Components.swift */,
+				32294402DEA397C5DD83FC4B /* FrettyApp.swift */,
+				E587A6F9503DC60E6C35FE45 /* HomeView.swift */,
+				258082BFEFDF7BC750174B4A /* Info.plist */,
+				2D60328EF82FDD01C99899E6 /* LearnView.swift */,
+				F3BD47A7CD03F5B3CA9ACDDF /* Music.swift */,
+				D69F74A357B7B868DF8B7807 /* ProgressScreen.swift */,
+				4ACD5C45DBB12E2FC3DE98D3 /* QuizView.swift */,
+				4FE404345CC0717966E3F29C /* Store.swift */,
+				3CF63D57DBB52E49581DE79A /* SummaryView.swift */,
+				845DD7051E00BDB7F9D9E391 /* Theme.swift */,
+				5EE3A8C2F87AA1789F8C8651 /* Resources */,
+			);
+			path = Fretty;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0B46FEFAA80E4826C08D22B /* Fretty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3C3CD113C04DD1E73CA6079 /* Build configuration list for PBXNativeTarget "Fretty" */;
+			buildPhases = (
+				4A051A50EF6A236C54B43B3D /* Sources */,
+				0D7A2946FB07DD5967C2800D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fretty;
+			packageProductDependencies = (
+			);
+			productName = Fretty;
+			productReference = 228991997C85D5B7D9D43BAE /* Fretty.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FA6C4DF3676128C8FF236BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					D0B46FEFAA80E4826C08D22B = {
+						DevelopmentTeam = RSDJXF7DXN;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3C24CBD6E340B70CB92D04D3 /* Build configuration list for PBXProject "Fretty" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 228C6B74847EB60980BF1C07;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 42020A8D3E26BAE982A4B6C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0B46FEFAA80E4826C08D22B /* Fretty */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D7A2946FB07DD5967C2800D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4103B861E96632C59DE3AB /* Assets.xcassets in Resources */,
+				B4768A115472E509DB0468DF /* DMMono-Medium.ttf in Resources */,
+				79E1CB6D88383F2BDE2067EE /* DMMono-Regular.ttf in Resources */,
+				2E0D8EB9A2A12B19A6CECAEC /* Figtree.ttf in Resources */,
+				A8123AC6AA23CD715CCAE675 /* NotoMusic-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A051A50EF6A236C54B43B3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04703945A83588409640151 /* AppModel.swift in Sources */,
+				CC812A4DD49764D3CBF45CC0 /* Audio.swift in Sources */,
+				9CD204A4C115248D4E7F6281 /* BoardViews.swift in Sources */,
+				C53772C78F49447C69E51B37 /* Components.swift in Sources */,
+				12E3C35F3A3BA8DF7F104188 /* FrettyApp.swift in Sources */,
+				02D69DC8931955958DA76C12 /* HomeView.swift in Sources */,
+				66727FABFF2117600210D212 /* LearnView.swift in Sources */,
+				B2ED78DCDD6C2B147A0F9CC0 /* Music.swift in Sources */,
+				A9523D4687184D071CEA2048 /* ProgressScreen.swift in Sources */,
+				A13F1E6AA50AA91A01833C57 /* QuizView.swift in Sources */,
+				7FC4FB523BEF8050CF4D1D0C /* Store.swift in Sources */,
+				F771624E51881EAE12E7C1F1 /* SummaryView.swift in Sources */,
+				58E54E2559A43C5185462F45 /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		019A94935ACD90921ED243C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RSDJXF7DXN;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		53E8829ECE203B8C547BB25F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fretty/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Fretty;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamnolle.fretty;
+				PRODUCT_NAME = Fretty;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F3DFD126629EF8155DBA74AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RSDJXF7DXN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FDAF18F03D19DB776FF55CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fretty/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Fretty;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamnolle.fretty;
+				PRODUCT_NAME = Fretty;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C24CBD6E340B70CB92D04D3 /* Build configuration list for PBXProject "Fretty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3DFD126629EF8155DBA74AE /* Debug */,
+				019A94935ACD90921ED243C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E3C3CD113C04DD1E73CA6079 /* Build configuration list for PBXNativeTarget "Fretty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53E8829ECE203B8C547BB25F /* Debug */,
+				FDAF18F03D19DB776FF55CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FA6C4DF3676128C8FF236BF /* Project object */;
+}
